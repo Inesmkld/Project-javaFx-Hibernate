@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.projectjavafxhibernate.Controller.PatientController">
+    <HBox spacing="10">
+        <VBox>
+            <TextField fx:id="txtNom" promptText="Nom"/>
+            <TextField fx:id="txtPrenom" promptText="Prénom"/>
+            <DatePicker fx:id="dateNaissancePicker" promptText="Date de Naissance"/>
+            <TextField fx:id="txtAdresse" promptText="Adresse"/>
+            <TextField fx:id="txtTel" promptText="Téléphone"/>
+            <TextField fx:id="txtEmail" promptText="Email"/>
+            <ChoiceBox fx:id="choiceSexe"/>
+            <ChoiceBox fx:id="choiceGsanguin"/>
+            <ChoiceBox fx:id="choiceSituation"/>
+        </VBox>
+        <VBox>
+            <Button text="Ajouter" onAction="#addPatient"/>
+            <Button text="Supprimer" onAction="#deletePatient"/>
+        </VBox>
+    </HBox>
+    <TableView fx:id="tablePatients">
+        <columns>
+            <TableColumn fx:id="colNom" text="Nom"/>
+            <TableColumn fx:id="colPrenom" text="Prénom"/>
+        </columns>
+    </TableView>
+</VBox>
